@@ -1,0 +1,12 @@
+a. Oracle
+SELECT DBMS_METADATA.GET_DDL('TABLE', 'FactInternetSales', 'AdventureWorksDW2019') FROM DUAL;
+
+b. PostGRE SQL
+SELECT table_name, column_name, data_type 
+FROM information_schema.columns 
+WHERE table_schema = 'AdventureWorksDW2019' 
+  AND table_name = 'FactInternetSales';
+
+c. MySQL
+1. SHOW CREATE TABLE AdventureWorksDW2019.FactInternetSales;	
+2. DESCRIBE AdventureWorksDW2019.dbo.FactInternetSales;
