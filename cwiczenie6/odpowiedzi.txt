@@ -1,0 +1,7 @@
+6.
+W zadaniu 5b zastosowano SCD Type 2. Zmiany w rekordach (np. LastName lub Title) powodują utworzenie nowego rekordu w tabeli scd_dimemp z nową datą StartDate, a poprzedni rekord jest oznaczony datą EndDate.
+
+W zadaniu 5c również zastosowano SCD Type 2, ponieważ zmiana w FirstName również spowoduje utworzenie nowego rekordu z nową datą StartDate, a stary rekord otrzyma datę EndDate.
+
+7.
+W przypadku kwerendy z 5c, ustawienie "Fail the transformation if changes are detected in a fixed attribute" ma znaczenie, ponieważ jeśli próbujesz zmienić atrybut, który jest ustawiony jako stały (np. EmployeeKey), proces SSIS nie powinien kontynuować transformacji, co zapobiegnie wprowadzeniu błędnych danych.
